@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DhyeyClient</title>
+    <style>
+        body, html {
+            margin: 0; padding: 0; height: 100%;
+            display: flex; justify-content: center; align-items: center;
+            background: radial-gradient(circle, #333 0%, #000 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(20, 20, 20, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #444;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        h1 { margin-bottom: 10px; letter-spacing: 2px; }
+        p { color: #888; margin-bottom: 30px; font-size: 14px; }
+
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            color: white;
+            min-width: 150px;
+        }
+
+        /* JS Button Style (Blue) */
+        .btn-js {
+            background-color: #007acc;
+            border-bottom: 4px solid #005a99;
+        }
+        .btn-js:hover { background-color: #0090f0; transform: translateY(-2px); }
+
+        /* WASM Button Style (Purple/Orange) */
+        .btn-wasm {
+            background-color: #654ff0;
+            border-bottom: 4px solid #4a39b3;
+        }
+        .btn-wasm:hover { background-color: #7d69ff; transform: translateY(-2px); }
+
+        .btn:active { transform: translateY(2px); border-bottom-width: 0; }
+
+        .version-info { margin-top: 25px; font-size: 11px; color: #555; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>DhyeyBG's Client</h1>
+        <p>Select your Client</p>
+
+        <div class="button-group">
+            <!-- Button for the JS version -->
+            <button class="btn btn-js" onclick="window.location.href='js/index.html'">
+                JS Version
+            </button>
+
+            <!-- Button for the WASM-GC version -->
+            <button class="btn btn-wasm" onclick="window.location.href='wasm/index.html'">
+                WASM-GC
+            </button>
+        </div>
+
+        <div class="version-info">
+            Ported by DhyeyBG • Press "P" in-game to toggle
+        </div>
+    </div>
+
+</body>
+</html>
